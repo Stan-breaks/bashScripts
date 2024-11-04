@@ -17,7 +17,7 @@ if [ ! -f "${TODAY}.md" ]; then
 		echo "tags: []"
 		echo "---"
 		echo ""
-		echo "# ${TODAY}"
+		echo " ${TODAY}"
 		echo ""
 		echo "# [[${YESTERDAY}]]"
 		echo ""
