@@ -3,6 +3,8 @@
 #assigning the date to the variables TODAY and YESTERDAY
 TODAY=$(date +'%Y-%m-%d')
 YESTERDAY=$(date -d "yesterday" +'%Y-%m-%d')
+MONTH=$(date +'%m')
+YEAR=$(date +'%Y')
 
 #changing the directory to the location of my daily notes
 cd "$HOME/vaults/personal/notes/dailies/" || exit 1
@@ -14,10 +16,10 @@ if [ ! -f "${TODAY}.md" ]; then
 		echo "---"
 		echo "id: ${TODAY}"
 		echo "aliases: []"
-		echo "tags: []"
+		echo "tags: [daily-journal,$MONTH,$YEAR]"
 		echo "---"
 		echo ""
-		echo " ${TODAY}"
+		echo "# Daily Journal - ${TODAY}"
 		echo ""
 		echo "# [[${YESTERDAY}]]"
 		echo ""

@@ -2,4 +2,3 @@
 
 cd "$HOME/vaults/personal" || exit 1
 nvim
-
