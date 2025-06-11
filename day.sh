@@ -14,14 +14,14 @@ if [ ! -f "${TODAY}.md" ]; then
 	#create the new note
 	{
 		echo "---"
-		echo "id: ${TODAY}"
+		echo "id: '${TODAY}'"
 		echo "aliases: []"
 		echo "tags: [daily-journal,$MONTH,$YEAR]"
 		echo "---"
 		echo ""
 		echo "# Daily Journal - ${TODAY}"
 		echo ""
-		echo "# [[${YESTERDAY}]]"
+		echo "# [['${YESTERDAY}']]"
 		echo ""
 		#ships the first five with the template
 		tail -n +6 template.md
